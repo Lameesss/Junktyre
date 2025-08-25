@@ -5,12 +5,12 @@ const Review = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const reviews = [
-    {
+     {
       id: 1,
-      name: "Sarah Johnson",
-      role: "Car Enthusiast",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
-      text: "Junk Tyre has completely transformed my vehicle's appearance! The deep black shine it gives to my tyres is incredible. My car looks brand new every time I use it. Highly recommended for anyone who wants that showroom-worthy look."
+      name: "David Thompson",
+      role: "Classic Car Owner",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      text: "For my classic car collection, I only use the best products. Junk Tyre provides that premium finish that makes my vintage vehicles look absolutely stunning. The deep black color is exactly what I was looking for."
     },
     {
       id: 2,
