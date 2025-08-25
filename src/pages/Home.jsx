@@ -17,7 +17,6 @@ const Home = () => {
     <div className='overflow-x-hidden'>
       <Landing/>
       <Clients/>
-     
       <About/>
       <Details/>
        <How/>
@@ -27,7 +26,6 @@ const Home = () => {
       {/* <Hero/> */}
       {/* <LatestCollection/> */}
       {/* <BestSeller/> */}
-     
       {/* <NewsLetterBox/> */}
     </div>
   )

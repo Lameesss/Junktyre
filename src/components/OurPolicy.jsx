@@ -31,12 +31,19 @@ const OurPolicy = () => {
               className="flex flex-col items-center"
               initial={{ y: 50, opacity: 0, scale: 0.8 }}
               whileInView={{ y: 0, opacity: 1, scale: 1 }}
+              animate={{ y: [0, -2, 0] }}
               transition={{ 
                 duration: 0.8, 
                 delay: index * 0.2,
                 type: "spring",
                 stiffness: 80,
-                damping: 15
+                damping: 15,
+                y: {
+                  duration: 4,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  ease: "easeInOut"
+                }
               }}
               viewport={{ once: true }}
               whileHover={{ 
@@ -49,20 +56,8 @@ const OurPolicy = () => {
                 scale: 1.02,
                 transition: { duration: 0.2, type: "spring", stiffness: 300 }
               }}
-              // Mobile-friendly continuous animations
-              animate={{
-                y: [0, -2, 0]
-              }}
-              transition={{
-                y: {
-                  duration: 4,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  ease: "easeInOut"
-                }
-              }}
             >
-              {/* Icon with animation - Works on all screen sizes */}
+              {/* Icon with animation */}
               <motion.div
                 className="mb-5 cursor-pointer"
                 whileHover={{ 
@@ -75,7 +70,6 @@ const OurPolicy = () => {
                   scale: 0.95,
                   transition: { duration: 0.3, type: "spring", stiffness: 200 }
                 }}
-                // Mobile-friendly animations
                 animate={{
                   scale: [1, 1.02, 1],
                   rotate: [0, 2, 0]
@@ -108,7 +102,6 @@ const OurPolicy = () => {
                     stiffness: 100
                   }}
                   viewport={{ once: true }}
-                  // Enhanced mobile interactions
                   whileHover={{ 
                     scale: 1.15,
                     rotateY: 15,
@@ -122,7 +115,7 @@ const OurPolicy = () => {
                 />
               </motion.div>
               
-              {/* Title with animation */}
+              {/* Title */}
               <motion.h3 
                 className='font-semibold mb-2 text-gray-800'
                 initial={{ y: 20, opacity: 0 }}
@@ -142,7 +135,7 @@ const OurPolicy = () => {
                 {policy.title}
               </motion.h3>
               
-              {/* Description with animation */}
+              {/* Description */}
               <motion.p 
                 className='text-gray-400 text-sm sm:text-base'
                 initial={{ y: 20, opacity: 0 }}
